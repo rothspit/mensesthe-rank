@@ -1,351 +1,270 @@
 import React, { useState, useMemo } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Menu, Search, Heart, Star, Clock, Navigation, TrendingUp, UserPlus, X, ExternalLink, Tag, Crown } from 'lucide-react';
+import {
+  MapPin,
+  Menu,
+  Search,
+  TrendingUp,
+  Clock,
+  Briefcase,
+  X,
+  ExternalLink,
+  ChevronRight,
+  Trophy,
+} from 'lucide-react';
 import { useShops } from './hooks/useShops';
 import ShopDetail from './pages/ShopDetail';
 import ViewToggle from './components/ViewToggle';
+import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION } from './constants';
 
-// Twitterアバター画像URLを生成
-const getAvatarUrl = (twitterId) => {
-  if (!twitterId) return 'https://placehold.co/400x400/1a1a1a/666666?text=No+Image';
-  const cleanId = twitterId.replace('@', '');
-  return `https://unavatar.io/twitter/${cleanId}`;
+const RANK_STYLES = {
+  1: 'bg-amber-500 text-white',
+  2: 'bg-slate-400 text-white',
+  3: 'bg-amber-700 text-white',
+  default: 'bg-slate-100 text-slate-600 border border-slate-200',
 };
 
-// 店舗カードコンポーネント
-const ShopCard = ({ shop }) => {
-  const [liked, setLiked] = useState(false);
-  const [imgError, setImgError] = useState(false);
+function RankBadge({ rank }) {
+  const style = RANK_STYLES[rank] || RANK_STYLES.default;
+  return (
+    <div
+      className={`flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center font-bold text-sm ${style}`}
+    >
+      {rank}
+    </div>
+  );
+}
 
+function RankingRow({ shop, rank }) {
   const tags = shop.seo_tags || [];
-  const avatarUrl = imgError ? 'https://placehold.co/400x400/1a1a1a/666666?text=No+Image' : getAvatarUrl(shop.twitter_id);
 
   return (
     <Link
       to={`/shops/${shop.id}`}
-      className="relative rounded-2xl overflow-hidden cursor-pointer group transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(212,175,55,0.3)] border border-white/10 block"
-      style={{
-        background: 'rgba(255, 255, 255, 0.05)',
-        backdropFilter: 'blur(10px)',
-      }}
+      className="flex items-center gap-3 p-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-sm transition-all group"
     >
-      {/* 画像 */}
-      <div className="relative aspect-square overflow-hidden bg-neutral-900">
-        <img
-          src={avatarUrl}
-          alt={shop.shop_name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-          onError={() => setImgError(true)}
-        />
-        {/* グラデーションオーバーレイ */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-        {/* お気に入りボタン */}
-        <button
-          className="absolute top-2 right-2 p-2 rounded-full bg-black/50 backdrop-blur-sm hover:bg-black/70 transition-colors border border-white/20"
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            setLiked(!liked);
-          }}
-        >
-          <Heart className={`w-4 h-4 ${liked ? 'fill-pink-500 text-pink-500' : 'text-white/70'}`} />
-        </button>
-      </div>
+      <RankBadge rank={rank} />
 
-      {/* コンテンツ */}
-      <div className="p-3">
-        {/* 店名 */}
-        <h3 className="font-bold text-sm text-white leading-tight mb-1 line-clamp-1">
+      <div className="flex-1 min-w-0">
+        <h3 className="font-bold text-slate-900 truncate group-hover:text-blue-700 transition-colors">
           {shop.shop_name}
         </h3>
-
-        {/* エリア */}
-        <div className="flex items-center text-xs text-amber-400 mb-2">
-          <MapPin className="w-3 h-3 mr-0.5" />
-          {shop.area_name}
+        <div className="flex items-center text-xs text-slate-500 mt-0.5">
+          <MapPin className="w-3 h-3 mr-0.5 flex-shrink-0" />
+          <span className="truncate">{shop.area_name}</span>
         </div>
-
-        {/* コンセプト */}
         {shop.main_concept && (
-          <p className="text-xs text-neutral-400 mb-2 line-clamp-2">
-            {shop.main_concept}
-          </p>
+          <p className="text-xs text-slate-500 mt-1 line-clamp-1">{shop.main_concept}</p>
         )}
-
-        {/* タグ */}
         {tags.length > 0 && (
-          <div className="flex flex-wrap gap-1 mb-2">
-            {tags.slice(0, 3).map((tag, i) => (
-              <span key={i} className="text-[10px] bg-pink-500/20 text-pink-400 rounded-full px-1.5 py-0.5 border border-pink-500/30">
-                #{tag}
+          <div className="flex flex-wrap gap-1 mt-1.5">
+            {tags.slice(0, 2).map((tag, i) => (
+              <span
+                key={i}
+                className="text-[10px] bg-blue-50 text-blue-600 rounded px-1.5 py-0.5"
+              >
+                {tag}
               </span>
             ))}
           </div>
         )}
-
-        {/* リンクボタン */}
-        <div className="flex items-center gap-1.5 flex-wrap">
-          {shop.twitter_id && (
-            <span
-              className="inline-flex items-center text-[10px] text-neutral-400 bg-white/10 px-2 py-1 rounded-md border border-white/10"
-            >
-              X
-            </span>
-          )}
-          {shop.website_url && (
-            <span
-              className="inline-flex items-center gap-0.5 text-[10px] px-2 py-1 rounded-md bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-medium"
-            >
-              公式
-              <ExternalLink className="w-2.5 h-2.5" />
-            </span>
-          )}
-        </div>
       </div>
+
+      <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-blue-400 flex-shrink-0" />
     </Link>
   );
-};
+}
 
-// タグフィルターコンポーネント
-const TagFilter = ({ tags, selectedTag, onTagChange }) => (
-  <div className="px-4 pb-3 flex gap-2 overflow-x-auto scrollbar-hide">
-    <button
-      onClick={() => onTagChange(null)}
-      className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all flex items-center gap-1 border ${
-        selectedTag === null
-          ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white border-pink-500 shadow-[0_0_15px_rgba(236,72,153,0.5)]'
-          : 'bg-transparent text-pink-400 border-pink-500/50 hover:bg-pink-500/20'
-      }`}
-    >
-      <Tag className="w-3 h-3" />
-      すべて
-    </button>
-    {tags.map((tag) => (
-      <button
-        key={tag}
-        onClick={() => onTagChange(tag)}
-        className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all border ${
-          selectedTag === tag
-            ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white border-pink-500 shadow-[0_0_15px_rgba(236,72,153,0.5)]'
-            : 'bg-transparent text-pink-400 border-pink-500/50 hover:bg-pink-500/20'
-        }`}
-      >
-        #{tag}
-      </button>
-    ))}
-  </div>
-);
+function Header({ onMenuClick, areas, areasWithData, selectedArea, onAreaChange }) {
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+      <div className="max-w-3xl mx-auto flex items-center justify-between px-4 py-3">
+        <Link to="/" className="flex items-center gap-2 min-w-0">
+          <div className="flex-shrink-0 w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <Trophy className="w-4 h-4 text-white" />
+          </div>
+          <div className="min-w-0">
+            <p className="font-bold text-sm text-slate-900 leading-tight truncate">{SITE_NAME}</p>
+            <p className="text-[10px] text-slate-500 leading-tight hidden sm:block">{SITE_TAGLINE}</p>
+          </div>
+        </Link>
 
-// ヘッダーコンポーネント
-const Header = ({ onMenuClick, areas, areasWithData, selectedArea, onAreaChange, allTags, selectedTag, onTagChange }) => (
-  <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10" style={{ background: 'rgba(10, 10, 10, 0.9)', backdropFilter: 'blur(20px)' }}>
-    <div className="flex items-center justify-between px-4 py-3">
-      {/* ロゴ */}
-      <Link to="/" className="flex items-center">
-        <Crown className="w-6 h-6 text-amber-400 mr-1" />
-        <span className="text-xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
-          esthe-now
-        </span>
-      </Link>
-
-      {/* 右側アイコン */}
-      <div className="flex items-center gap-2">
-        <button className="p-2 rounded-full hover:bg-white/10 transition-colors">
-          <Search className="w-5 h-5 text-neutral-400" />
-        </button>
-        <button className="p-2 rounded-full hover:bg-white/10 transition-colors relative">
-          <MapPin className="w-5 h-5 text-neutral-400" />
-          <span className="absolute top-1 right-1 w-2 h-2 bg-amber-400 rounded-full" />
-        </button>
         <button
-          className="p-2 rounded-full hover:bg-white/10 transition-colors"
+          className="p-2 rounded-lg hover:bg-slate-100 transition-colors flex-shrink-0"
           onClick={onMenuClick}
+          aria-label="メニュー"
         >
-          <Menu className="w-5 h-5 text-neutral-400" />
+          <Menu className="w-5 h-5 text-slate-600" />
         </button>
       </div>
-    </div>
 
-    {/* エリアフィルター */}
-    <div className="px-4 pb-2 flex gap-2 overflow-x-auto scrollbar-hide">
-      <button
-        onClick={() => onAreaChange('all')}
-        className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all border ${
-          selectedArea === 'all'
-            ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-black border-amber-500 shadow-[0_0_20px_rgba(212,175,55,0.5)]'
-            : 'bg-transparent text-amber-400 border-amber-500/50 hover:bg-amber-500/20'
-        }`}
-      >
-        すべて
-      </button>
-      {areas.map((area) => {
-        const hasData = areasWithData.has(area.slug);
-        return (
+      <div className="max-w-3xl mx-auto px-4 pb-3 flex gap-2 overflow-x-auto scrollbar-hide">
+        <button
+          onClick={() => onAreaChange('all')}
+          className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all border ${
+            selectedArea === 'all'
+              ? 'bg-blue-600 text-white border-blue-600'
+              : 'bg-white text-slate-600 border-slate-300 hover:border-blue-400'
+          }`}
+        >
+          全国
+        </button>
+        {areas.map((area) => {
+          const hasData = areasWithData.has(area.slug);
+          return (
+            <button
+              key={area.slug}
+              onClick={() => hasData && onAreaChange(area.slug)}
+              disabled={!hasData}
+              className={`px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all border ${
+                selectedArea === area.slug
+                  ? 'bg-blue-600 text-white border-blue-600'
+                  : hasData
+                    ? 'bg-white text-slate-600 border-slate-300 hover:border-blue-400'
+                    : 'bg-slate-50 text-slate-300 border-slate-200 cursor-not-allowed'
+              }`}
+            >
+              {area.name}
+              {!hasData && <span className="ml-1 text-[9px]">準備中</span>}
+            </button>
+          );
+        })}
+      </div>
+    </header>
+  );
+}
+
+function Footer({ activeTab, setActiveTab }) {
+  const tabs = [
+    { id: 'ranking', icon: TrendingUp, label: 'ランキング' },
+    { id: 'new', icon: Clock, label: '新着' },
+    { id: 'jobs', icon: Briefcase, label: '求人' },
+  ];
+
+  return (
+    <footer className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-slate-200 pb-safe">
+      <div className="max-w-3xl mx-auto flex items-center justify-around px-4 py-2">
+        {tabs.map(({ id, icon: Icon, label }) => (
           <button
-            key={area.slug}
-            onClick={() => hasData ? onAreaChange(area.slug) : null}
-            className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all border relative ${
-              selectedArea === area.slug
-                ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-black border-amber-500 shadow-[0_0_20px_rgba(212,175,55,0.5)]'
-                : hasData
-                  ? 'bg-transparent text-amber-400 border-amber-500/50 hover:bg-amber-500/20'
-                  : 'bg-transparent text-neutral-600 border-neutral-700 cursor-not-allowed'
+            key={id}
+            className={`flex flex-col items-center p-2 rounded-xl transition-colors ${
+              activeTab === id ? 'text-blue-600' : 'text-slate-400'
             }`}
-            disabled={!hasData}
+            onClick={() => setActiveTab(id)}
           >
-            {area.name}
-            {!hasData && (
-              <span className="ml-1 text-[8px] text-neutral-500">準備中</span>
-            )}
-          </button>
-        );
-      })}
-    </div>
-
-    {/* タグフィルター */}
-    {allTags.length > 0 && (
-      <TagFilter tags={allTags} selectedTag={selectedTag} onTagChange={onTagChange} />
-    )}
-  </header>
-);
-
-// フッターコンポーネント
-const Footer = ({ activeTab, setActiveTab }) => (
-  <footer className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 pb-safe" style={{ background: 'rgba(10, 10, 10, 0.9)', backdropFilter: 'blur(20px)' }}>
-    <div className="flex items-center justify-around px-4 py-2">
-      <button
-        className={`flex flex-col items-center p-2 rounded-xl transition-colors ${activeTab === 'nearby' ? 'text-amber-400' : 'text-neutral-500'}`}
-        onClick={() => setActiveTab('nearby')}
-      >
-        <Navigation className="w-5 h-5" />
-        <span className="text-xs mt-1">現在地</span>
-      </button>
-
-      <button
-        className={`flex flex-col items-center p-2 rounded-xl transition-colors ${activeTab === 'ranking' ? 'text-amber-400' : 'text-neutral-500'}`}
-        onClick={() => setActiveTab('ranking')}
-      >
-        <TrendingUp className="w-5 h-5" />
-        <span className="text-xs mt-1">ランキング</span>
-      </button>
-
-      {/* FAB */}
-      <button className="relative -top-4 flex items-center justify-center w-14 h-14 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:shadow-[0_0_40px_rgba(212,175,55,0.8)] transition-all hover:scale-105">
-        <Search className="w-6 h-6 text-black" />
-      </button>
-
-      <button
-        className={`flex flex-col items-center p-2 rounded-xl transition-colors ${activeTab === 'new' ? 'text-amber-400' : 'text-neutral-500'}`}
-        onClick={() => setActiveTab('new')}
-      >
-        <UserPlus className="w-5 h-5" />
-        <span className="text-xs mt-1">新着</span>
-      </button>
-
-      <button
-        className={`flex flex-col items-center p-2 rounded-xl transition-colors ${activeTab === 'favorite' ? 'text-amber-400' : 'text-neutral-500'}`}
-        onClick={() => setActiveTab('favorite')}
-      >
-        <Heart className="w-5 h-5" />
-        <span className="text-xs mt-1">お気に入り</span>
-      </button>
-    </div>
-  </footer>
-);
-
-// サイドメニュー
-const SideMenu = ({ isOpen, onClose }) => (
-  <>
-    {/* オーバーレイ */}
-    <div
-      className={`fixed inset-0 bg-black/70 z-50 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-      onClick={onClose}
-    />
-
-    {/* メニュー */}
-    <div
-      className={`fixed top-0 right-0 bottom-0 w-72 z-50 transform transition-transform border-l border-white/10 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
-      style={{ background: 'rgba(18, 18, 18, 0.95)', backdropFilter: 'blur(20px)' }}
-    >
-      <div className="p-4 border-b border-white/10 flex items-center justify-between">
-        <span className="font-bold text-lg text-white">メニュー</span>
-        <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-full">
-          <X className="w-5 h-5 text-neutral-400" />
-        </button>
-      </div>
-
-      <nav className="p-4">
-        {[
-          { icon: Search, label: '店舗検索' },
-          { icon: MapPin, label: 'エリアから探す' },
-          { icon: TrendingUp, label: '人気ランキング' },
-          { icon: Clock, label: '新着店舗' },
-          { icon: Heart, label: 'お気に入り' },
-          { icon: Star, label: 'レビュー' },
-        ].map((item, i) => (
-          <button
-            key={i}
-            className="flex items-center gap-3 w-full p-3 rounded-xl hover:bg-white/10 transition-colors text-left"
-          >
-            <item.icon className="w-5 h-5 text-amber-400" />
-            <span className="text-neutral-300">{item.label}</span>
+            <Icon className="w-5 h-5" />
+            <span className="text-xs mt-0.5">{label}</span>
           </button>
         ))}
-      </nav>
-
-      <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-white/10">
-        <button className="w-full py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-bold rounded-xl shadow-[0_0_20px_rgba(212,175,55,0.4)]">
-          店舗様ログイン
-        </button>
       </div>
-    </div>
-  </>
-);
+    </footer>
+  );
+}
 
-// トップページコンポーネント
+function SideMenu({ isOpen, onClose }) {
+  const items = [
+    { icon: TrendingUp, label: '人気ランキング', href: '/' },
+    { icon: MapPin, label: 'エリアから探す', href: '/' },
+    { icon: Briefcase, label: '求人を探す（準備中）', href: null },
+    { icon: Search, label: '掲載について（準備中）', href: null },
+  ];
+
+  return (
+    <>
+      <div
+        className={`fixed inset-0 bg-black/40 z-50 transition-opacity ${
+          isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={onClose}
+      />
+      <div
+        className={`fixed top-0 right-0 bottom-0 w-72 z-50 bg-white border-l border-slate-200 transform transition-transform ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="p-4 border-b border-slate-200 flex items-center justify-between">
+          <span className="font-bold text-slate-900">メニュー</span>
+          <button onClick={onClose} className="p-2 hover:bg-slate-100 rounded-lg">
+            <X className="w-5 h-5 text-slate-500" />
+          </button>
+        </div>
+
+        <nav className="p-3">
+          {items.map((item, i) => {
+            const content = (
+              <>
+                <item.icon className="w-5 h-5 text-blue-600" />
+                <span className="text-slate-700 text-sm">{item.label}</span>
+              </>
+            );
+
+            if (item.href) {
+              return (
+                <Link
+                  key={i}
+                  to={item.href}
+                  onClick={onClose}
+                  className="flex items-center gap-3 w-full p-3 rounded-xl hover:bg-slate-50 transition-colors"
+                >
+                  {content}
+                </Link>
+              );
+            }
+
+            return (
+              <div
+                key={i}
+                className="flex items-center gap-3 w-full p-3 rounded-xl text-slate-400 cursor-not-allowed"
+              >
+                {content}
+              </div>
+            );
+          })}
+        </nav>
+
+        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-200">
+          <button className="w-full py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors text-sm">
+            店舗様ログイン（準備中）
+          </button>
+        </div>
+      </div>
+    </>
+  );
+}
+
 function TopPage() {
-  const [activeTab, setActiveTab] = useState('nearby');
+  const [activeTab, setActiveTab] = useState('ranking');
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedArea, setSelectedArea] = useState('all');
-  const [selectedTag, setSelectedTag] = useState(null);
 
   const { shops, areas, areasWithData, loading, error } = useShops(selectedArea);
 
-  // 全店舗からユニークなタグを抽出
-  const allTags = useMemo(() => {
-    const tagSet = new Set();
-    shops.forEach(shop => {
-      if (shop.seo_tags) {
-        shop.seo_tags.forEach(tag => tagSet.add(tag));
-      }
-    });
-    return Array.from(tagSet).sort();
-  }, [shops]);
+  const rankedShops = useMemo(() => {
+    if (activeTab === 'new') {
+      return [...shops].reverse();
+    }
+    return shops;
+  }, [shops, activeTab]);
 
-  // タグでフィルタリングされた店舗
-  const filteredShops = useMemo(() => {
-    if (!selectedTag) return shops;
-    return shops.filter(shop =>
-      shop.seo_tags && shop.seo_tags.includes(selectedTag)
-    );
-  }, [shops, selectedTag]);
+  const selectedAreaName =
+    selectedArea === 'all'
+      ? '全国'
+      : areas.find((a) => a.slug === selectedArea)?.name || '';
 
-  // タグフィルターの高さに応じてヘッダーのパディングを調整
-  const headerPadding = allTags.length > 0 ? 'pt-36' : 'pt-28';
+  const pageTitle =
+    selectedArea === 'all'
+      ? `${SITE_NAME}｜${SITE_TAGLINE}`
+      : `${selectedAreaName}のメンズエステランキング｜${SITE_NAME}`;
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
-      {/* SEO メタタグ */}
+    <div className="min-h-screen bg-slate-50">
       <Helmet>
-        <title>東京メンズエステ厳選まとめ｜可愛い子・コンセプト店検索</title>
-        <meta name="description" content="秋葉原・池袋・新宿など、東京の厳選メンズエステ店の写真、Twitter、コンセプトを掲載。可愛い子が見つかる検索サイト。" />
-        <meta property="og:title" content="東京メンズエステ厳選まとめ｜可愛い子・コンセプト店検索" />
-        <meta property="og:description" content="秋葉原・池袋・新宿など、東京の厳選メンズエステ店の写真、Twitter、コンセプトを掲載。" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={SITE_DESCRIPTION} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={SITE_DESCRIPTION} />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="東京メンズエステ厳選まとめ｜可愛い子・コンセプト店検索" />
-        <meta name="twitter:description" content="秋葉原・池袋・新宿など、東京の厳選メンズエステ店の写真、Twitter、コンセプトを掲載。" />
       </Helmet>
 
       <Header
@@ -353,55 +272,56 @@ function TopPage() {
         areas={areas}
         areasWithData={areasWithData}
         selectedArea={selectedArea}
-        onAreaChange={(area) => {
-          setSelectedArea(area);
-          setSelectedTag(null);
-        }}
-        allTags={allTags}
-        selectedTag={selectedTag}
-        onTagChange={setSelectedTag}
+        onAreaChange={setSelectedArea}
       />
 
-      {/* メインコンテンツ */}
-      <main className={`${headerPadding} pb-24 px-3`}>
-        {/* セクションヘッダー */}
-        <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-lg font-bold text-white flex items-center">
-            <Crown className="w-5 h-5 text-amber-400 mr-1" />
-            厳選店舗
-          </h2>
-          <span className="text-xs text-neutral-500">{filteredShops.length}件</span>
+      <main className="max-w-3xl mx-auto pt-36 pb-24 px-4">
+        <div className="mb-5 p-4 bg-white border border-slate-200 rounded-xl">
+          <h1 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <Trophy className="w-5 h-5 text-amber-500" />
+            {selectedAreaName}のメンズエステランキング
+          </h1>
+          <p className="text-sm text-slate-500 mt-1">
+            人気店舗をランキング形式で掲載。口コミ・求人情報も順次追加予定。
+          </p>
         </div>
 
-        {/* ローディング */}
-        {loading && (
-          <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400"></div>
-          </div>
-        )}
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="text-sm font-semibold text-slate-700">
+            {activeTab === 'ranking' ? '人気ランキング' : activeTab === 'new' ? '新着店舗' : '求人'}
+          </h2>
+          <span className="text-xs text-slate-400">{rankedShops.length}件</span>
+        </div>
 
-        {/* エラー */}
-        {error && (
-          <div className="text-center py-12 text-neutral-500">
+        {activeTab === 'jobs' ? (
+          <div className="text-center py-16 bg-white border border-slate-200 rounded-xl">
+            <Briefcase className="w-10 h-10 text-slate-300 mx-auto mb-3" />
+            <p className="text-slate-600 font-medium">求人ページは準備中です</p>
+            <p className="text-sm text-slate-400 mt-1">セラピスト求人を順次掲載予定</p>
+          </div>
+        ) : loading ? (
+          <div className="flex items-center justify-center py-16">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600" />
+          </div>
+        ) : error ? (
+          <div className="text-center py-16 text-slate-500 bg-white border border-slate-200 rounded-xl">
             データの取得に失敗しました
           </div>
-        )}
-
-        {/* リスト/地図表示切り替え */}
-        {!loading && !error && (
-          <ViewToggle shops={filteredShops}>
-            {filteredShops.length > 0 ? (
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-                {filteredShops.map((shop, index) => (
-                  <ShopCard
+        ) : (
+          <ViewToggle shops={rankedShops}>
+            {rankedShops.length > 0 ? (
+              <div className="flex flex-col gap-2">
+                {rankedShops.map((shop, index) => (
+                  <RankingRow
                     key={shop.id || shop.twitter_id || index}
                     shop={shop}
+                    rank={index + 1}
                   />
                 ))}
               </div>
             ) : (
-              <div className="text-center py-12 text-neutral-500">
-                店舗が見つかりませんでした
+              <div className="text-center py-16 text-slate-500 bg-white border border-slate-200 rounded-xl">
+                このエリアの店舗はまだ登録されていません
               </div>
             )}
           </ViewToggle>
@@ -410,27 +330,10 @@ function TopPage() {
 
       <Footer activeTab={activeTab} setActiveTab={setActiveTab} />
       <SideMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
-
-      <style jsx global>{`
-        @keyframes slide-up {
-          from { transform: translateY(100%); }
-          to { transform: translateY(0); }
-        }
-        .animate-slide-up {
-          animation: slide-up 0.3s ease-out;
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        .pb-safe {
-          padding-bottom: env(safe-area-inset-bottom);
-        }
-      `}</style>
     </div>
   );
 }
 
-// メインアプリ（ルーティング）
 export default function App() {
   return (
     <Routes>

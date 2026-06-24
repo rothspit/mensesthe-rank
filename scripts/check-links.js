@@ -46,7 +46,7 @@ async function checkUrl(url, retryCount = 0) {
       method: 'HEAD',
       signal: controller.signal,
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; LinkChecker/1.0; +https://esthe-now.jp)',
+        'User-Agent': 'Mozilla/5.0 (compatible; LinkChecker/1.0; +https://esthe-now-8qe5.vercel.app)',
       },
       redirect: 'follow',
     });
@@ -94,7 +94,7 @@ async function checkUrlWithGet(url) {
       method: 'GET',
       signal: controller.signal,
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; LinkChecker/1.0; +https://esthe-now.jp)',
+        'User-Agent': 'Mozilla/5.0 (compatible; LinkChecker/1.0; +https://esthe-now-8qe5.vercel.app)',
       },
       redirect: 'follow',
     });

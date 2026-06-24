@@ -9,7 +9,7 @@
  * 環境変数:
  *   VITE_SUPABASE_URL - Supabase プロジェクトURL
  *   VITE_SUPABASE_ANON_KEY - Supabase Anon Key
- *   BASE_URL - サイトのベースURL（省略時: https://esthe-now.jp）
+ *   BASE_URL - サイトのベースURL（省略時: https://esthe-now-8qe5.vercel.app）
  */
 
 import { createClient } from '@supabase/supabase-js';
@@ -23,7 +23,7 @@ const __dirname = dirname(__filename);
 
 // 設定
 const CONFIG = {
-  BASE_URL: process.env.BASE_URL || process.env.VITE_BASE_URL || 'https://esthe-now.jp',
+  BASE_URL: process.env.BASE_URL || process.env.VITE_BASE_URL || 'https://esthe-now-8qe5.vercel.app',
   OUTPUT_DIR: 'public',
   OUTPUT_FILE: 'sitemap.xml',
 };
