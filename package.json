@@ -8,7 +8,8 @@
     "build": "node scripts/generate-sitemap.js && vite build",
     "preview": "vite preview",
     "check-links": "node scripts/check-links.js",
-    "generate-sitemap": "node scripts/generate-sitemap.js"
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "publish-shops": "node scripts/publish-scraped-shops.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
