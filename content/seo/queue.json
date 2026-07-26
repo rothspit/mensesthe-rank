@@ -123,18 +123,27 @@
     },
     {
       "query": "千葉 メンズエステ 相場",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T08:38:33.264Z",
+      "file": "975-daily-千葉-メンズエステ-相場.md",
+      "thumb": "/images/articles/975-daily-千葉-メンズエステ-相場.png"
     },
     {
       "query": "船橋 メンズエステ 初めて 40代",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T08:40:28.286Z",
+      "file": "976-daily-船橋-メンズエステ-初めて-40代.md",
+      "thumb": "/images/articles/976-daily-船橋-メンズエステ-初めて-40代.png"
     },
     {
       "query": "柏 メンズエステ 料金",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T08:42:30.488Z",
+      "file": "977-daily-柏-メンズエステ-料金.md",
+      "thumb": "/images/articles/977-daily-柏-メンズエステ-料金.png"
     }
   ]
 }
