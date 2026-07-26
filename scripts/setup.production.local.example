@@ -1,0 +1,12 @@
+# 本番セットアップ用（gitignore 対象）
+# コピーして値を入れ、スクリプト実行時に source する
+
+# GitHub Personal Access Token (repo スコープ) — gh auth login なら不要
+# GITHUB_TOKEN=ghp_...
+
+# Cloudflare R2（ダッシュボード → R2 → Manage R2 API Tokens）
+# R2_ACCESS_KEY_ID=
+# R2_SECRET_ACCESS_KEY=
+
+# 管理 API（VPS app_config.admin_token — set-admin-token-secret.sh が自動取得）
+# ADMIN_TOKEN=

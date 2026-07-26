@@ -33,7 +33,7 @@ mensesthe-rank.jp で稼働中の「SEO編集部パイプライン」を、同�
   - 運営者・グループ紹介が必要なら /about 相当ページのみ
 
 # mensesthe-rank 側の参照実装（同じ型を踏襲）
-リポジトリ: esthe-now（本番 mensesthe-rank.jp）
+リポジトリ: mensesthe-rank（本番 mensesthe-rank.jp）
 
 必須参考ファイル:
 - content/seo/README.md

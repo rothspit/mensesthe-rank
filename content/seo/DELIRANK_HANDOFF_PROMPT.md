@@ -21,7 +21,7 @@ mensesthe-rank.jp で稼働中の「SEO編集部パイプライン」を、同�
 - 他サイトとの総当たり相互リンクはしない。運営者ページでの姉妹メディア紹介のみ
 
 # mensesthe-rank 側の参照実装（同じ型を踏襲）
-リポジトリ: esthe-now（本番 mensesthe-rank.jp）
+リポジトリ: mensesthe-rank（本番 mensesthe-rank.jp）
 
 必須参考ファイル:
 - content/seo/README.md
