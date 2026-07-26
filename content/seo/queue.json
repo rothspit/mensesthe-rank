@@ -99,18 +99,27 @@
     },
     {
       "query": "西船橋 メンズエステ 料金",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T08:32:20.728Z",
+      "file": "972-daily-西船橋-メンズエステ-料金.md",
+      "thumb": "/images/articles/972-daily-西船橋-メンズエステ-料金.png"
     },
     {
       "query": "津田沼 メンズエステ おすすめ",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T08:33:47.168Z",
+      "file": "973-daily-津田沼-メンズエステ-おすすめ.md",
+      "thumb": "/images/articles/973-daily-津田沼-メンズエステ-おすすめ.png"
     },
     {
       "query": "本八幡 メンズエステ 口コミ",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T08:35:45.877Z",
+      "file": "974-daily-本八幡-メンズエステ-口コミ.md",
+      "thumb": "/images/articles/974-daily-本八幡-メンズエステ-口コミ.png"
     },
     {
       "query": "千葉 メンズエステ 相場",
