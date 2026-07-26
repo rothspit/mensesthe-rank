@@ -75,18 +75,27 @@
     },
     {
       "query": "市川 メンズエステ 選び方",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T08:26:56.509Z",
+      "file": "969-daily-市川-メンズエステ-選び方.md",
+      "thumb": "/images/articles/969-daily-市川-メンズエステ-選び方.png"
     },
     {
       "query": "船橋 西船橋 メンズエステ どっち",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T08:28:24.162Z",
+      "file": "970-daily-船橋-西船橋-メンズエステ-どっち.md",
+      "thumb": "/images/articles/970-daily-船橋-西船橋-メンズエステ-どっち.png"
     },
     {
       "query": "千葉 メンズエステ 初めて",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T08:29:44.397Z",
+      "file": "971-daily-千葉-メンズエステ-初めて.md",
+      "thumb": "/images/articles/971-daily-千葉-メンズエステ-初めて.png"
     },
     {
       "query": "西船橋 メンズエステ 料金",
