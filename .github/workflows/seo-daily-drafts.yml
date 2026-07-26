@@ -1,0 +1,65 @@
+# 毎日: 記事下書き3本 + PNGサムネ生成
+#
+# - 自動公開しない（allowlist は人手）
+# - X への自動投稿はしない（凍結リスク）
+# Secrets:
+#   ANTHROPIC_API_KEY … 本文生成（優先）
+#   OPENAI_API_KEY    … 任意（サムネLLM等）
+
+name: SEO Daily Drafts
+
+on:
+  schedule:
+    - cron: '0 1 * * *' # 毎日 10:00 JST 前後
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: '生成本数'
+        required: false
+        default: '3'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  daily-drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install Japanese fonts (サムネ用)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate 3 drafts + PNG thumbnails
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          LIMIT="${{ inputs.limit || 3 }}"
+          node scripts/seo/daily-generate.js --execute --limit "$LIMIT"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'chore(seo): 日次記事下書き3本とPNGサムネ'
+          title: 'SEO: 日次下書き（要ファクトチェック）'
+          body: |
+            毎日の自動下書きです。
+
+            - [ ] 本文を人手でファクトチェック
+            - [ ] `src/constants/articles.js` の allowlist に追加
+            - [ ] **Xには投稿しない**
+            - [ ] サムネは `public/images/articles/*.png`
+
+            詳細: `content/seo/README.md`
+          branch: chore/seo-daily-drafts
+          delete-branch: true

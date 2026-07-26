@@ -20,3 +20,12 @@ npm-debug.log*
 .env
 .env.local
 .env.*.local
+.vercel
+.env*.local
+scripts/setup.production.local
+*-service-account*.json
+gsc-credentials.json
+
+# Scrape exports
+data/
+scripts/cloudflare/r2-credentials.local

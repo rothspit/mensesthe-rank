@@ -4,27 +4,48 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "node scripts/generate-sitemap.js && vite build",
-    "preview": "vite preview",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "check-links": "node scripts/check-links.js",
-    "generate-sitemap": "node scripts/generate-sitemap.js"
+    "provision-shop-account": "node scripts/provision-shop-account.js",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "generate-local-areas": "node scripts/generate-local-areas.js",
+    "generate-sub-areas": "node scripts/generate-sub-areas.js",
+    "generate-areas": "npm run generate-local-areas && npm run generate-sub-areas",
+    "generate-area-articles": "node scripts/generate-area-articles.js --top 50 --dry-run",
+    "generate-area-articles:run": "node scripts/generate-area-articles.js --top 50 --execute",
+    "validate-areas": "node scripts/validate-area-master.js",
+    "audit-sub-area-names": "node scripts/audit-sub-area-names.js",
+    "audit-areas": "node scripts/audit-area-consistency.js",
+    "scrape-shops:dry-run": "node scripts/scrape-shops.js --dry-run",
+    "scrape-shops": "node scripts/scrape-shops.js --execute",
+    "seo:fetch-csv": "node scripts/seo/fetch-gsc-queries.js --csv",
+    "seo:fetch-api": "node scripts/seo/fetch-gsc-queries.js --api --days 28",
+    "seo:find-rising": "node scripts/seo/find-rising-keywords.js",
+    "seo:find-rewrites": "node scripts/seo/find-rewrite-candidates.js",
+    "seo:generate-articles": "node scripts/seo/generate-keyword-articles.js --dry-run --limit 5",
+    "seo:generate-articles:run": "node scripts/seo/generate-keyword-articles.js --execute --limit 5",
+    "seo:daily": "node scripts/seo/daily-generate.js --dry-run --limit 3",
+    "seo:daily:run": "node scripts/seo/daily-generate.js --execute --limit 3",
+    "seo:preview": "node scripts/seo/preview-html.js",
+    "seo:to-png": "node scripts/seo/convert-to-png.js",
+    "seo:demo": "node scripts/seo/fetch-gsc-queries.js --csv content/seo/samples/week-a.csv --label demo-a && node scripts/seo/fetch-gsc-queries.js --csv content/seo/samples/week-b.csv --label demo-b && node scripts/seo/find-rising-keywords.js --current content/seo/snapshots/demo-b.json --previous content/seo/snapshots/demo-a.json && node scripts/seo/generate-keyword-articles.js --dry-run --limit 3"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.39.0",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.303.0",
+    "marked": "^18.0.6",
+    "next": "^15.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet-async": "^2.0.4",
     "react-leaflet": "^4.2.1",
-    "react-router-dom": "^6.21.0"
+    "sharp": "^0.35.3"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "vite": "^5.0.10"
+    "tailwindcss": "^3.4.0"
   }
 }

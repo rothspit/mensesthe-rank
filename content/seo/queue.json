@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "dailyLimit": 3,
+  "notes": "千葉エリア優先。地元知見で肉付けしやすい語から書く。done は再生成しない。GSC機会があれば daily はそちら優先。",
+  "focus": "chiba",
+  "items": [
+    {
+      "query": "新宿 メンズエステ おすすめ",
+      "status": "done",
+      "doneAt": "2026-07-14T11:35:26.977Z",
+      "file": "960-daily-新宿-メンズエステ-おすすめ.md",
+      "thumb": "/images/articles/960-daily-新宿-メンズエステ-おすすめ.png"
+    },
+    {
+      "query": "池袋 メンズエステ 料金",
+      "status": "done",
+      "doneAt": "2026-07-14T11:35:27.037Z",
+      "file": "961-daily-池袋-メンズエステ-料金.md",
+      "thumb": "/images/articles/961-daily-池袋-メンズエステ-料金.png"
+    },
+    {
+      "query": "横浜 メンズエステ 口コミ",
+      "status": "done",
+      "doneAt": "2026-07-14T11:35:27.115Z",
+      "file": "962-daily-横浜-メンズエステ-口コミ.md",
+      "thumb": "/images/articles/962-daily-横浜-メンズエステ-口コミ.png"
+    },
+    {
+      "query": "船橋 メンズエステ おすすめ",
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-14T17:36:27.283Z",
+      "file": "963-daily-船橋-メンズエステ-おすすめ.md",
+      "thumb": "/images/articles/963-daily-船橋-メンズエステ-おすすめ.png"
+    },
+    {
+      "query": "西船橋 メンズエステ 口コミ",
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-14T17:37:57.987Z",
+      "file": "964-daily-西船橋-メンズエステ-口コミ.md",
+      "thumb": "/images/articles/964-daily-西船橋-メンズエステ-口コミ.png"
+    },
+    {
+      "query": "千葉 メンズエステ 選び方",
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-14T17:39:28.902Z",
+      "file": "965-daily-千葉-メンズエステ-選び方.md",
+      "thumb": "/images/articles/965-daily-千葉-メンズエステ-選び方.png"
+    },
+    {
+      "query": "船橋 メンズエステ 料金",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "柏 メンズエステ おすすめ",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "松戸 メンズエステ 口コミ",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "市川 メンズエステ 選び方",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "船橋 西船橋 メンズエステ どっち",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "千葉 メンズエステ 初めて",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "西船橋 メンズエステ 料金",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "津田沼 メンズエステ おすすめ",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "本八幡 メンズエステ 口コミ",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "千葉 メンズエステ 相場",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "船橋 メンズエステ 初めて 40代",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "柏 メンズエステ 料金",
+      "status": "pending",
+      "region": "chiba"
+    }
+  ]
+}
