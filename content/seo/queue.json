@@ -51,18 +51,27 @@
     },
     {
       "query": "船橋 メンズエステ 料金",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T07:58:09.350Z",
+      "file": "966-daily-船橋-メンズエステ-料金.md",
+      "thumb": "/images/articles/966-daily-船橋-メンズエステ-料金.png"
     },
     {
       "query": "柏 メンズエステ おすすめ",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T07:59:31.767Z",
+      "file": "967-daily-柏-メンズエステ-おすすめ.md",
+      "thumb": "/images/articles/967-daily-柏-メンズエステ-おすすめ.png"
     },
     {
       "query": "松戸 メンズエステ 口コミ",
-      "status": "pending",
-      "region": "chiba"
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-07-26T08:00:57.396Z",
+      "file": "968-daily-松戸-メンズエステ-口コミ.md",
+      "thumb": "/images/articles/968-daily-松戸-メンズエステ-口コミ.png"
     },
     {
       "query": "市川 メンズエステ 選び方",
