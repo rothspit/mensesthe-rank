@@ -6,7 +6,7 @@
 - **description**: 「横浜 メンズエステ 口コミ」で探す方向け。関内・横浜駅・みなとみらいでの選び方、口コミで見るべき点・捨てるべき点、料金との突き合わせ方を40〜60代向けに解説します。
 - **canonical**: https://mensesthe-rank.jp/guide/daily-yokohama-kuchikomi
 - **og_image**: /images/articles/962-daily-横浜-メンズエステ-口コミ.png
-- **記事タイプ**: エリアガイド（問い合わせ意図：口コミ）
+- **記事タイプ**: キーワードガイド（公開・人手リライト前提）
 - **target_query**: 横浜 メンズエステ 口コミ
 - **opportunity_type**: area
 - **priority**: high

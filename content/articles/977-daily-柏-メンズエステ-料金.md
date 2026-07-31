@@ -4,9 +4,9 @@
 
 - **title**: 柏 メンズエステ 料金｜メンズエステの探し方と選び方【2026】
 - **description**: 柏 メンズエステ 料金でお悩みの方向けに、メンズエステの選び方・料金の見方・エリアランキングの活用法をわかりやすく解説します。
-- **canonical**: https://mensesthe-rank.jp/guide/daily-柏-メンズエステ-料金
+- **canonical**: https://mensesthe-rank.jp/guide/daily-kashiwa-ryokin
 - **og_image**: /images/articles/977-daily-柏-メンズエステ-料金.png
-- **記事タイプ**: 自動下書き（非公開・要ファクトチェック）
+- **記事タイプ**: キーワードガイド（公開・人手リライト前提）
 - **target_query**: 柏 メンズエステ 料金
 - **opportunity_type**: topical
 - **priority**: medium
@@ -14,9 +14,11 @@
 - **肩書き**: 元メンズエステ勤務・編集担当
 - **経歴**: 現場出身の編集です！みている方がいかに失敗をしないで、お店というより、いいセラピと出会えるかに特化して魂込めて編集頑張ってます！
 - **更新日**: 2026-07-26
+- **公開日**: 2026-07-31
 - **source**: daily-queue
 - **fact_check**: pending（公開前に必ず人手確認）
 - **distribution**: no_x（風俗系アカウントの凍結リスクのため X 投稿しない）
+- **対応エリアページ**: /areas/kashiwa
 
 ---
 

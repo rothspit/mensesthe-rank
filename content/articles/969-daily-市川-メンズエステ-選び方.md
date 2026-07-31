@@ -4,9 +4,9 @@
 
 - **title**: 市川 メンズエステ 選び方｜メンズエステの探し方と選び方【2026】
 - **description**: 市川 メンズエステ 選び方でお悩みの方向けに、メンズエステの選び方・料金の見方・エリアランキングの活用法をわかりやすく解説します。
-- **canonical**: https://mensesthe-rank.jp/guide/daily-市川-メンズエステ-選び方
+- **canonical**: https://mensesthe-rank.jp/guide/daily-ichikawa-erabikata
 - **og_image**: /images/articles/969-daily-市川-メンズエステ-選び方.png
-- **記事タイプ**: 自動下書き（非公開・要ファクトチェック）
+- **記事タイプ**: キーワードガイド（公開・人手リライト前提）
 - **target_query**: 市川 メンズエステ 選び方
 - **opportunity_type**: topical
 - **priority**: medium
@@ -14,9 +14,11 @@
 - **肩書き**: 元セラピスト・編集担当
 - **経歴**: 現場で施術してた側の人間です。客目線のお世辞より、「実際どうだったか」をハッキリ書きます。気持ちいい話もするけど、避けた方がいい店の気配も逃がしません。姉御肌で面倒見ます。
 - **更新日**: 2026-07-26
+- **公開日**: 2026-07-31
 - **source**: daily-queue
 - **fact_check**: pending（公開前に必ず人手確認）
 - **distribution**: no_x（風俗系アカウントの凍結リスクのため X 投稿しない）
+- **対応エリアページ**: /areas/ichikawa
 
 ---
 
