@@ -6,7 +6,7 @@
 - **description**: 「池袋 メンズエステ 料金」で調べる方向け。60分〜120分の相場目安、初回料金の落とし穴、指名・延長の確認ポイント、東口・西口での選び方を解説します。
 - **canonical**: https://mensesthe-rank.jp/guide/daily-ikebukuro-ryokin
 - **og_image**: /images/articles/961-daily-池袋-メンズエステ-料金.png
-- **記事タイプ**: エリアガイド（問い合わせ意図：料金）
+- **記事タイプ**: キーワードガイド（公開・人手リライト前提）
 - **target_query**: 池袋 メンズエステ 料金
 - **opportunity_type**: area
 - **priority**: high

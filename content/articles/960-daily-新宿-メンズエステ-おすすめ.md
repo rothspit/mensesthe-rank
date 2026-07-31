@@ -6,7 +6,7 @@
 - **description**: 「新宿 メンズエステ おすすめ」で探す方向け。編集担当が客目線で付けたおすすめ度、歌舞伎町・西新宿のアクセス感、料金・電話確認のコツを40〜60代向けに解説します。
 - **canonical**: https://mensesthe-rank.jp/guide/daily-shinjuku-osusume
 - **og_image**: /images/articles/960-daily-新宿-メンズエステ-おすすめ.png
-- **記事タイプ**: エリアガイド（問い合わせ意図：おすすめ）
+- **記事タイプ**: キーワードガイド（公開・人手リライト前提）
 - **target_query**: 新宿 メンズエステ おすすめ
 - **opportunity_type**: area
 - **priority**: high
