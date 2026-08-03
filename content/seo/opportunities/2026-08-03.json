@@ -1,0 +1,709 @@
+{
+  "generatedAt": "2026-08-03T04:37:10.113Z",
+  "currentSnapshot": "content/seo/snapshots/2026-08-03.json",
+  "previousSnapshot": "content/seo/snapshots/2026-07-26.json",
+  "criteria": {
+    "minImpressions": 30,
+    "minGrowthRate": 0.3,
+    "minClicksGrowth": 2
+  },
+  "count": 18,
+  "opportunities": [
+    {
+      "query": "新横浜メンズエステランキング",
+      "current": {
+        "clicks": 0,
+        "impressions": 170,
+        "ctr": 0,
+        "position": 9.711764705882352
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 170,
+        "position": 9.711764705882352
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 47,
+      "type": "area",
+      "area": {
+        "slug": "yokohama",
+        "label": "横浜",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/yokohama",
+      "guideRoute": "/guide/area/yokohama",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 85,
+        "reasons": [
+          "decision:ランキング",
+          "has_area",
+          "area_plus_decision",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "大宮メンズエステランキング",
+      "current": {
+        "clicks": 0,
+        "impressions": 83,
+        "ctr": 0,
+        "position": 8.53012048192771
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 83,
+        "position": 8.53012048192771
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 38.3,
+      "type": "area",
+      "area": {
+        "slug": "omiya",
+        "label": "大宮",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/omiya",
+      "guideRoute": "/guide/area/omiya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 85,
+        "reasons": [
+          "decision:ランキング",
+          "has_area",
+          "area_plus_decision",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "大宮 メンズエステ ランキング",
+      "current": {
+        "clicks": 1,
+        "impressions": 61,
+        "ctr": 0.01639344262295082,
+        "position": 8.688524590163935
+      },
+      "previous": {
+        "clicks": 1,
+        "impressions": 61,
+        "position": 8.688524590163935
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 36.1,
+      "type": "area",
+      "area": {
+        "slug": "omiya",
+        "label": "大宮",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/omiya",
+      "guideRoute": "/guide/area/omiya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 85,
+        "reasons": [
+          "decision:ランキング",
+          "has_area",
+          "area_plus_decision",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "大宮 メンズエステランキング",
+      "current": {
+        "clicks": 0,
+        "impressions": 52,
+        "ctr": 0,
+        "position": 8.576923076923077
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 52,
+        "position": 8.576923076923077
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 35.2,
+      "type": "area",
+      "area": {
+        "slug": "omiya",
+        "label": "大宮",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/omiya",
+      "guideRoute": "/guide/area/omiya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 85,
+        "reasons": [
+          "decision:ランキング",
+          "has_area",
+          "area_plus_decision",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "メンズエステランキング 大宮",
+      "current": {
+        "clicks": 0,
+        "impressions": 35,
+        "ctr": 0,
+        "position": 8.742857142857144
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 35,
+        "position": 8.742857142857144
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 33.5,
+      "type": "area",
+      "area": {
+        "slug": "omiya",
+        "label": "大宮",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/omiya",
+      "guideRoute": "/guide/area/omiya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 85,
+        "reasons": [
+          "decision:ランキング",
+          "has_area",
+          "area_plus_decision",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "南浦和 メンズエステ ランキング",
+      "current": {
+        "clicks": 2,
+        "impressions": 34,
+        "ctr": 0.058823529411764705,
+        "position": 9.147058823529411
+      },
+      "previous": {
+        "clicks": 2,
+        "impressions": 34,
+        "position": 9.147058823529411
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 33.4,
+      "type": "area",
+      "area": {
+        "slug": "urawa",
+        "label": "浦和",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/urawa",
+      "guideRoute": "/guide/area/urawa",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 85,
+        "reasons": [
+          "decision:ランキング",
+          "has_area",
+          "area_plus_decision",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "品川 メンズエステ",
+      "current": {
+        "clicks": 7,
+        "impressions": 1116,
+        "ctr": 0.0062724014336917565,
+        "position": 9.758960573476703
+      },
+      "previous": {
+        "clicks": 7,
+        "impressions": 1116,
+        "position": 9.758960573476703
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 70,
+      "type": "area",
+      "area": {
+        "slug": "shinagawa",
+        "label": "品川",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shinagawa",
+      "guideRoute": "/guide/area/shinagawa",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "メンズエステ 品川",
+      "current": {
+        "clicks": 0,
+        "impressions": 212,
+        "ctr": 0,
+        "position": 9.18867924528302
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 212,
+        "position": 9.18867924528302
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 51.2,
+      "type": "area",
+      "area": {
+        "slug": "shinagawa",
+        "label": "品川",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shinagawa",
+      "guideRoute": "/guide/area/shinagawa",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "medium"
+    },
+    {
+      "query": "品川メンズエステ",
+      "current": {
+        "clicks": 2,
+        "impressions": 158,
+        "ctr": 0.012658227848101266,
+        "position": 10.734177215189874
+      },
+      "previous": {
+        "clicks": 2,
+        "impressions": 158,
+        "position": 10.734177215189874
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 45.8,
+      "type": "area",
+      "area": {
+        "slug": "shinagawa",
+        "label": "品川",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shinagawa",
+      "guideRoute": "/guide/area/shinagawa",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "medium"
+    },
+    {
+      "query": "武蔵浦和 メンズエステ",
+      "current": {
+        "clicks": 2,
+        "impressions": 144,
+        "ctr": 0.013888888888888888,
+        "position": 12.23611111111111
+      },
+      "previous": {
+        "clicks": 2,
+        "impressions": 144,
+        "position": 12.23611111111111
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 44.4,
+      "type": "area",
+      "area": {
+        "slug": "urawa",
+        "label": "浦和",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/urawa",
+      "guideRoute": "/guide/area/urawa",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "medium"
+    },
+    {
+      "query": "大宮 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 61,
+        "ctr": 0,
+        "position": 19.229508196721312
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 61,
+        "position": 19.229508196721312
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 36.1,
+      "type": "area",
+      "area": {
+        "slug": "omiya",
+        "label": "大宮",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/omiya",
+      "guideRoute": "/guide/area/omiya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "medium"
+    },
+    {
+      "query": "東大阪 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 60,
+        "ctr": 0,
+        "position": 16.05
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 60,
+        "position": 16.05
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 36,
+      "type": "area",
+      "area": {
+        "slug": "osakaminami",
+        "label": "大阪",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/osakaminami",
+      "guideRoute": "/guide/area/osakaminami",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "medium"
+    },
+    {
+      "query": "蒲田 メンズエステ",
+      "current": {
+        "clicks": 1,
+        "impressions": 56,
+        "ctr": 0.017857142857142856,
+        "position": 13.392857142857142
+      },
+      "previous": {
+        "clicks": 1,
+        "impressions": 56,
+        "position": 13.392857142857142
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 35.6,
+      "type": "area",
+      "area": {
+        "slug": "kamata",
+        "label": "蒲田",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/kamata",
+      "guideRoute": "/guide/area/kamata",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "medium"
+    },
+    {
+      "query": "品川区 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 37,
+        "ctr": 0,
+        "position": 22.594594594594593
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 37,
+        "position": 22.594594594594593
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 33.7,
+      "type": "area",
+      "area": {
+        "slug": "shinagawa",
+        "label": "品川",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shinagawa",
+      "guideRoute": "/guide/area/shinagawa",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "medium"
+    },
+    {
+      "query": "メンズエステ品川",
+      "current": {
+        "clicks": 0,
+        "impressions": 36,
+        "ctr": 0,
+        "position": 10.527777777777779
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 36,
+        "position": 10.527777777777779
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 33.6,
+      "type": "area",
+      "area": {
+        "slug": "shinagawa",
+        "label": "品川",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shinagawa",
+      "guideRoute": "/guide/area/shinagawa",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "medium"
+    },
+    {
+      "query": "全国メンズエステ渋谷",
+      "current": {
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 8.969696969696969
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 33,
+        "position": 8.969696969696969
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 33.3,
+      "type": "area",
+      "area": {
+        "slug": "shibuya",
+        "label": "渋谷",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shibuya",
+      "guideRoute": "/guide/area/shibuya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "medium"
+    },
+    {
+      "query": "メンズエステ 武蔵浦和",
+      "current": {
+        "clicks": 0,
+        "impressions": 31,
+        "ctr": 0,
+        "position": 10.129032258064516
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 31,
+        "position": 10.129032258064516
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 33.1,
+      "type": "area",
+      "area": {
+        "slug": "urawa",
+        "label": "浦和",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/urawa",
+      "guideRoute": "/guide/area/urawa",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "medium"
+    },
+    {
+      "query": "名古屋市昭和区 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 30,
+        "ctr": 0,
+        "position": 12.733333333333333
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 30,
+        "position": 12.733333333333333
+      },
+      "impressionsGrowthRate": 0,
+      "clicksDelta": 0,
+      "positionOpportunity": true,
+      "rising": false,
+      "score": 33,
+      "type": "area",
+      "area": {
+        "slug": "nagoya",
+        "label": "名古屋",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/nagoya",
+      "guideRoute": "/guide/area/nagoya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "medium"
+    }
+  ]
+}
