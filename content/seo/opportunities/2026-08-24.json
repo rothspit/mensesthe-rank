@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-08-24T02:25:50.296Z",
+  "currentSnapshot": "content/seo/snapshots/2026-08-24.json",
+  "previousSnapshot": "content/seo/snapshots/2026-07-26.json",
+  "criteria": {
+    "minImpressions": 30,
+    "minGrowthRate": 0.3,
+    "minClicksGrowth": 2
+  },
+  "count": 1,
+  "opportunities": [
+    {
+      "query": "メンズエステランキング大阪キタ",
+      "current": {
+        "clicks": 0,
+        "impressions": 155,
+        "ctr": 0,
+        "position": 6.967741935483871
+      },
+      "previous": null,
+      "impressionsGrowthRate": 1,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 105.5,
+      "type": "area",
+      "area": {
+        "slug": "osakaminami",
+        "label": "大阪",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/osakaminami",
+      "guideRoute": "/guide/area/osakaminami",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 85,
+        "reasons": [
+          "decision:ランキング",
+          "has_area",
+          "area_plus_decision",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    }
+  ]
+}
