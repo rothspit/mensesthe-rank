@@ -8,15 +8,10 @@
 
 name: SEO Daily Drafts
 
+# 記事下書きの自動生成は停止（店舗・セラピストページを厚くする方針）。
+# 手動実行だけ残す。
 on:
-  schedule:
-    - cron: '0 1 * * *' # 毎日 10:00 JST 前後
   workflow_dispatch:
-    inputs:
-      limit:
-        description: '生成本数'
-        required: false
-        default: '3'
 
 permissions:
   contents: write

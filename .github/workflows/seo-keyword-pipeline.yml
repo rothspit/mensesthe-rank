@@ -1,4 +1,5 @@
-# 週次: Search Console 伸びワード → SEO記事下書き
+# 週次の記事下書きは停止（店舗・セラピストページを厚くする方針）。
+# 手動実行だけ残す。
 #
 # Secrets:
 #   GSC_SERVICE_ACCOUNT_JSON  … Search Console API
@@ -9,18 +10,7 @@
 name: SEO Keyword Pipeline
 
 on:
-  schedule:
-    - cron: '0 1 * * 1' # 月曜 10:00 JST 前後
   workflow_dispatch:
-    inputs:
-      days:
-        description: 'GSC取得日数（API時）'
-        required: false
-        default: '28'
-      generate_limit:
-        description: '生成する下書き件数'
-        required: false
-        default: '5'
 
 permissions:
   contents: write
