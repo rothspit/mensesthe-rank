@@ -2,7 +2,7 @@
   "version": 1,
   "dailyLimit": 3,
   "notes": "千葉エリア優先。地元知見で肉付けしやすい語から書く。done は再生成しない。GSC機会があれば daily はそちら優先。",
-  "focus": "chiba",
+  "focus": "priority-hubs",
   "items": [
     {
       "query": "新宿 メンズエステ おすすめ",
@@ -53,97 +53,607 @@
       "query": "船橋 メンズエステ 料金",
       "status": "done",
       "region": "chiba",
-      "doneAt": "2026-07-26T07:58:09.350Z",
-      "file": "966-daily-船橋-メンズエステ-料金.md",
-      "thumb": "/images/articles/966-daily-船橋-メンズエステ-料金.png"
-    },
-    {
-      "query": "柏 メンズエステ おすすめ",
-      "status": "done",
-      "region": "chiba",
-      "doneAt": "2026-07-26T07:59:31.767Z",
-      "file": "967-daily-柏-メンズエステ-おすすめ.md",
-      "thumb": "/images/articles/967-daily-柏-メンズエステ-おすすめ.png"
-    },
-    {
-      "query": "松戸 メンズエステ 口コミ",
-      "status": "done",
-      "region": "chiba",
-      "doneAt": "2026-07-26T08:00:57.396Z",
-      "file": "968-daily-松戸-メンズエステ-口コミ.md",
-      "thumb": "/images/articles/968-daily-松戸-メンズエステ-口コミ.png"
-    },
-    {
-      "query": "市川 メンズエステ 選び方",
-      "status": "done",
-      "region": "chiba",
-      "doneAt": "2026-07-26T08:26:56.509Z",
-      "file": "969-daily-市川-メンズエステ-選び方.md",
-      "thumb": "/images/articles/969-daily-市川-メンズエステ-選び方.png"
+      "doneAt": "2026-08-30T00:00:00.000Z",
+      "file": "966-daily-船橋-メンズエステ-料金.md"
     },
     {
       "query": "船橋 西船橋 メンズエステ どっち",
       "status": "done",
       "region": "chiba",
-      "doneAt": "2026-07-26T08:28:24.162Z",
-      "file": "970-daily-船橋-西船橋-メンズエステ-どっち.md",
-      "thumb": "/images/articles/970-daily-船橋-西船橋-メンズエステ-どっち.png"
-    },
-    {
-      "query": "千葉 メンズエステ 初めて",
-      "status": "done",
-      "region": "chiba",
-      "doneAt": "2026-07-26T08:29:44.397Z",
-      "file": "971-daily-千葉-メンズエステ-初めて.md",
-      "thumb": "/images/articles/971-daily-千葉-メンズエステ-初めて.png"
+      "doneAt": "2026-08-30T00:00:00.000Z",
+      "file": "970-daily-船橋-西船橋-メンズエステ-どっち.md"
     },
     {
       "query": "西船橋 メンズエステ 料金",
       "status": "done",
       "region": "chiba",
-      "doneAt": "2026-07-26T08:32:20.728Z",
-      "file": "972-daily-西船橋-メンズエステ-料金.md",
-      "thumb": "/images/articles/972-daily-西船橋-メンズエステ-料金.png"
-    },
-    {
-      "query": "津田沼 メンズエステ おすすめ",
-      "status": "done",
-      "region": "chiba",
-      "doneAt": "2026-07-26T08:33:47.168Z",
-      "file": "973-daily-津田沼-メンズエステ-おすすめ.md",
-      "thumb": "/images/articles/973-daily-津田沼-メンズエステ-おすすめ.png"
-    },
-    {
-      "query": "本八幡 メンズエステ 口コミ",
-      "status": "done",
-      "region": "chiba",
-      "doneAt": "2026-07-26T08:35:45.877Z",
-      "file": "974-daily-本八幡-メンズエステ-口コミ.md",
-      "thumb": "/images/articles/974-daily-本八幡-メンズエステ-口コミ.png"
-    },
-    {
-      "query": "千葉 メンズエステ 相場",
-      "status": "done",
-      "region": "chiba",
-      "doneAt": "2026-07-26T08:38:33.264Z",
-      "file": "975-daily-千葉-メンズエステ-相場.md",
-      "thumb": "/images/articles/975-daily-千葉-メンズエステ-相場.png"
+      "doneAt": "2026-08-30T00:00:00.000Z",
+      "file": "972-daily-西船橋-メンズエステ-料金.md"
     },
     {
       "query": "船橋 メンズエステ 初めて 40代",
       "status": "done",
       "region": "chiba",
-      "doneAt": "2026-07-26T08:40:28.286Z",
-      "file": "976-daily-船橋-メンズエステ-初めて-40代.md",
-      "thumb": "/images/articles/976-daily-船橋-メンズエステ-初めて-40代.png"
+      "doneAt": "2026-08-30T00:00:00.000Z",
+      "file": "976-daily-船橋-メンズエステ-初めて-40代.md"
+    },
+    {
+      "query": "西船橋 メンズエステ 初めて",
+      "status": "done",
+      "region": "chiba",
+      "doneAt": "2026-08-30T00:00:00.000Z",
+      "file": "979-daily-西船橋-メンズエステ-初めて.md"
+    },
+    {
+      "query": "新宿 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "shinjuku",
+      "intent": "ryokin",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "新宿 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "shinjuku",
+      "intent": "hajimete",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "池袋 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "ikebukuro",
+      "intent": "osusume",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "池袋 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "ikebukuro",
+      "intent": "hajimete",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "渋谷 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "shibuya",
+      "intent": "osusume",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "渋谷 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "shibuya",
+      "intent": "ryokin",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "渋谷 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "shibuya",
+      "intent": "hajimete",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "上野 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "ueno",
+      "intent": "osusume",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "上野 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "ueno",
+      "intent": "ryokin",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "横浜 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "yokohama",
+      "intent": "osusume",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "横浜 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "yokohama",
+      "intent": "ryokin",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "横浜 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "yokohama",
+      "intent": "hajimete",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "川崎 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "kawasaki",
+      "intent": "osusume",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "川崎 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "kawasaki",
+      "intent": "ryokin",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "船橋 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "funabashi",
+      "intent": "hajimete",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "西船橋 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "nishifunabashi",
+      "intent": "osusume",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "西船橋 船橋 メンズエステ どっち",
+      "status": "pending",
+      "areaSlug": "nishifunabashi",
+      "intent": "docchi",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "八王子 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "hachioji",
+      "intent": "osusume",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "八王子 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "hachioji",
+      "intent": "ryokin",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "八王子 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "hachioji",
+      "intent": "hajimete",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "立川 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "tachikawa",
+      "intent": "osusume",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "立川 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "tachikawa",
+      "intent": "ryokin",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "町田 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "machida",
+      "intent": "osusume",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "町田 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "machida",
+      "intent": "ryokin",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "大宮 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "omiya",
+      "intent": "osusume",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "大宮 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "omiya",
+      "intent": "ryokin",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "大宮 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "omiya",
+      "intent": "hajimete",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "千葉 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "chiba",
+      "intent": "osusume",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "千葉 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "chiba",
+      "intent": "ryokin",
+      "region": "kanto",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "大阪 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "osaka",
+      "intent": "osusume",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "大阪 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "osaka",
+      "intent": "ryokin",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "大阪 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "osaka",
+      "intent": "hajimete",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "梅田 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "osakakita",
+      "intent": "osusume",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "梅田 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "osakakita",
+      "intent": "ryokin",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "梅田 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "osakakita",
+      "intent": "hajimete",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "難波 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "osakaminami",
+      "intent": "osusume",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "難波 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "osakaminami",
+      "intent": "ryokin",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "京都 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "kyoto",
+      "intent": "osusume",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "京都 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "kyoto",
+      "intent": "ryokin",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "京都 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "kyoto",
+      "intent": "hajimete",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "神戸 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "kobe",
+      "intent": "osusume",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "神戸 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "kobe",
+      "intent": "ryokin",
+      "region": "kinki",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "名古屋 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "nagoya",
+      "intent": "osusume",
+      "region": "tokai",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "名古屋 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "nagoya",
+      "intent": "ryokin",
+      "region": "tokai",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "名古屋 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "nagoya",
+      "intent": "hajimete",
+      "region": "tokai",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "栄 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "sakae",
+      "intent": "osusume",
+      "region": "tokai",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "栄 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "sakae",
+      "intent": "ryokin",
+      "region": "tokai",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "博多 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "hakata",
+      "intent": "osusume",
+      "region": "kyushu-okinawa",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "博多 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "hakata",
+      "intent": "ryokin",
+      "region": "kyushu-okinawa",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "博多 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "hakata",
+      "intent": "hajimete",
+      "region": "kyushu-okinawa",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "天神 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "tenjin-station",
+      "intent": "osusume",
+      "region": "kyushu-okinawa",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "天神 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "tenjin-station",
+      "intent": "ryokin",
+      "region": "kyushu-okinawa",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "札幌 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "sapporo",
+      "intent": "osusume",
+      "region": "hokkaido",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "札幌 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "sapporo",
+      "intent": "ryokin",
+      "region": "hokkaido",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "札幌 メンズエステ 初めて",
+      "status": "pending",
+      "areaSlug": "sapporo",
+      "intent": "hajimete",
+      "region": "hokkaido",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "仙台 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "sendai",
+      "intent": "osusume",
+      "region": "minami-tohoku",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "仙台 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "sendai",
+      "intent": "ryokin",
+      "region": "minami-tohoku",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "広島 メンズエステ おすすめ",
+      "status": "pending",
+      "areaSlug": "hiroshima",
+      "intent": "osusume",
+      "region": "chugoku",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "広島 メンズエステ 料金",
+      "status": "pending",
+      "areaSlug": "hiroshima",
+      "intent": "ryokin",
+      "region": "chugoku",
+      "source": "priority-hub",
+      "seededAt": "2026-09-13T10:37:45.403Z"
+    },
+    {
+      "query": "柏 メンズエステ おすすめ",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "松戸 メンズエステ 口コミ",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "市川 メンズエステ 選び方",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "千葉 メンズエステ 初めて",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "津田沼 メンズエステ おすすめ",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "本八幡 メンズエステ 口コミ",
+      "status": "pending",
+      "region": "chiba"
+    },
+    {
+      "query": "千葉 メンズエステ 相場",
+      "status": "pending",
+      "region": "chiba"
     },
     {
       "query": "柏 メンズエステ 料金",
-      "status": "done",
-      "region": "chiba",
-      "doneAt": "2026-07-26T08:42:30.488Z",
-      "file": "977-daily-柏-メンズエステ-料金.md",
-      "thumb": "/images/articles/977-daily-柏-メンズエステ-料金.png"
+      "status": "pending",
+      "region": "chiba"
     }
   ]
 }

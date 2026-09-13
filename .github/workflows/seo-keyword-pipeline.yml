@@ -1,5 +1,5 @@
-# 週次の記事下書きは停止（店舗・セラピストページを厚くする方針）。
-# 手動実行だけ残す。
+# 週次の記事下書きは seo-gsc-weekly + seo-daily-drafts に分離。
+# この workflow は手動の一括パイプライン用に残す。
 #
 # Secrets:
 #   GSC_SERVICE_ACCOUNT_JSON  … Search Console API

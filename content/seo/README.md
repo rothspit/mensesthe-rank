@@ -8,15 +8,45 @@
 4. **弱い記事はリライト候補**
 5. **著者・更新日を明示**（鈴木＝現場出身の案内役／田中＝元セラピ・はっきり姉御。交互・意図で割当。堅い真面目口調は避ける）
 6. **X（旧Twitter）には投稿しない**（風俗隣接ジャンルの凍結リスク）
+7. **エリアクラスターも下書きまで自動・本番反映は人手**
+
+## 仕組み化の全体像
+
+| レーン | 自動化 | 公開 |
+|--------|--------|------|
+| sitemap / メタ / 都道府県SSR / パンくず / フッター | コード恒久化 | デプロイで即反映 |
+| 優先ハブ定義 | [`src/constants/seoPriorityHubs.js`](../../src/constants/seoPriorityHubs.js) | — |
+| エリアクラスター下書き | 週次 GHA `seo-area-clusters` | `merge-area-clusters --apply` 後に反映 |
+| ガイド下書き | 日次 GHA `seo-daily-drafts` | `articles.js` allowlist |
+| GSC スナップショット | 週次 GHA `seo-gsc-weekly` | 機会ファイルのみ（Secrets 必須） |
+
+```
+GSC weekly → opportunities/
+priority hubs → queue.json (seed-hub-queue)
+                ↓
+         daily-generate (3本) → PR
+                ↓
+         人手 allowlist
+
+priority hubs → generate-area-clusters → cluster-drafts/*.json → PR
+                ↓
+         人手 merge-area-clusters --apply
+```
 
 ## コマンド
 
 ```bash
 npm run seo:daily          # 日次3本 dry-run
 npm run seo:daily:run      # 日次3本 + PNGサムネ書き込み
+npm run seo:seed-hub-queue # 優先ハブ×意図を queue に投入
+npm run seo:clusters       # クラスター下書き dry-run
+npm run seo:clusters:run   # クラスター下書き生成
+npm run seo:clusters:merge # マージ dry-run
+npm run seo:clusters:merge:apply  # areaSeoCluster.js へ反映
 npm run seo:to-png -- path/to/image.webp
 npm run seo:find-rising
 npm run seo:find-rewrites
+npm run seo:fetch-api      # GSC API（要 credentials）
 ```
 
 ## 日次フロー
@@ -30,7 +60,20 @@ GSC機会（あれば優先） + content/seo/queue.json
   → PR（GHA）→ 人手校正 → allowlist
 ```
 
-GitHub Actions: `.github/workflows/seo-daily-drafts.yml`（毎日）
+GitHub Actions:
+
+- `.github/workflows/seo-daily-drafts.yml`（毎日）
+- `.github/workflows/seo-area-clusters.yml`（週1）
+- `.github/workflows/seo-gsc-weekly.yml`（週1・Secrets 未設定なら skip）
+
+## エリアクラスター
+
+1. `npm run seo:clusters:run`（または週次 PR）
+2. `content/seo/cluster-drafts/{slug}.json` を確認
+3. `npm run seo:clusters:merge:apply`
+4. 差分レビュー後にデプロイ
+
+薄い `content/articles` の一括 allowlist は禁止。西船橋型の固有文だけを入れる。
 
 ## PNG 必須ルール
 
@@ -68,4 +111,19 @@ ANTHROPIC_API_KEY=...          # 本文生成（優先）
 ANTHROPIC_MODEL=claude-sonnet-4-5
 ```
 
-任意（CI）: `GSC_SERVICE_ACCOUNT_JSON`, `GSC_SITE_URL`, `ANTHROPIC_API_KEY`
+GitHub Actions Secrets:
+
+| Secret | 用途 |
+|--------|------|
+| `ANTHROPIC_API_KEY` | 日次下書き・クラスター LLM |
+| `OPENAI_API_KEY` | 任意フォールバック |
+| `GSC_SERVICE_ACCOUNT_JSON` | Search Console API（未設定なら GSC 週次は skip） |
+| `GSC_SITE_URL` | 例 `https://mensesthe-rank.jp/` |
+
+### GSC サービスアカウント手順（要約）
+
+1. Google Cloud でサービスアカウント作成 → JSON キー発行
+2. Search Console でサイトのユーザーにその SA メールを追加（権限: 所有者またはフル）
+3. GitHub Secrets に JSON 全文を `GSC_SERVICE_ACCOUNT_JSON` として登録
+4. `GSC_SITE_URL=https://mensesthe-rank.jp/` を登録
+5. `seo-gsc-weekly` を workflow_dispatch で一度実行し、PR が立つことを確認
