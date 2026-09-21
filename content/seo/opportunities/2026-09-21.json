@@ -1,0 +1,121 @@
+{
+  "generatedAt": "2026-09-21T07:25:29.651Z",
+  "currentSnapshot": "content/seo/snapshots/2026-09-21.json",
+  "previousSnapshot": "content/seo/snapshots/2026-07-26.json",
+  "criteria": {
+    "minImpressions": 30,
+    "minGrowthRate": 0.3,
+    "minClicksGrowth": 2
+  },
+  "count": 3,
+  "opportunities": [
+    {
+      "query": "メンズエステランキング大阪キタ",
+      "current": {
+        "clicks": 0,
+        "impressions": 146,
+        "ctr": 0,
+        "position": 5.904109589041096
+      },
+      "previous": null,
+      "impressionsGrowthRate": 1,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 104.6,
+      "type": "area",
+      "area": {
+        "slug": "osakaminami",
+        "label": "大阪",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/osakaminami",
+      "guideRoute": "/guide/area/osakaminami",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 85,
+        "reasons": [
+          "decision:ランキング",
+          "has_area",
+          "area_plus_decision",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "渋谷 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 41,
+        "ctr": 0,
+        "position": 73.95121951219512
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 4,
+        "position": 49
+      },
+      "impressionsGrowthRate": 9.25,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 94.1,
+      "type": "area",
+      "area": {
+        "slug": "shibuya",
+        "label": "渋谷",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shibuya",
+      "guideRoute": "/guide/area/shibuya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "福岡メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 37,
+        "ctr": 0,
+        "position": 45.054054054054056
+      },
+      "previous": null,
+      "impressionsGrowthRate": 1,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 93.7,
+      "type": "area",
+      "area": {
+        "slug": "hakata",
+        "label": "博多",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/hakata",
+      "guideRoute": "/guide/area/hakata",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    }
+  ]
+}
