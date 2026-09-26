@@ -86,30 +86,39 @@
     },
     {
       "query": "新宿 メンズエステ 料金",
-      "status": "pending",
+      "status": "done",
       "areaSlug": "shinjuku",
       "intent": "ryokin",
       "region": "kanto",
       "source": "priority-hub",
-      "seededAt": "2026-09-13T10:37:45.403Z"
+      "seededAt": "2026-09-13T10:37:45.403Z",
+      "doneAt": "2026-09-26T09:21:55.868Z",
+      "file": "978-daily-新宿-メンズエステ-料金.md",
+      "thumb": "/images/articles/978-daily-新宿-メンズエステ-料金.png"
     },
     {
       "query": "新宿 メンズエステ 初めて",
-      "status": "pending",
+      "status": "done",
       "areaSlug": "shinjuku",
       "intent": "hajimete",
       "region": "kanto",
       "source": "priority-hub",
-      "seededAt": "2026-09-13T10:37:45.403Z"
+      "seededAt": "2026-09-13T10:37:45.403Z",
+      "doneAt": "2026-09-26T09:21:56.017Z",
+      "file": "979-daily-新宿-メンズエステ-初めて.md",
+      "thumb": "/images/articles/979-daily-新宿-メンズエステ-初めて.png"
     },
     {
       "query": "池袋 メンズエステ おすすめ",
-      "status": "pending",
+      "status": "done",
       "areaSlug": "ikebukuro",
       "intent": "osusume",
       "region": "kanto",
       "source": "priority-hub",
-      "seededAt": "2026-09-13T10:37:45.403Z"
+      "seededAt": "2026-09-13T10:37:45.403Z",
+      "doneAt": "2026-09-26T09:21:56.172Z",
+      "file": "980-daily-池袋-メンズエステ-おすすめ.md",
+      "thumb": "/images/articles/980-daily-池袋-メンズエステ-おすすめ.png"
     },
     {
       "query": "池袋 メンズエステ 初めて",
