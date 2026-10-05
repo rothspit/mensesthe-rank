@@ -1,0 +1,193 @@
+{
+  "generatedAt": "2026-10-05T07:56:11.141Z",
+  "currentSnapshot": "content/seo/snapshots/2026-10-05.json",
+  "previousSnapshot": "content/seo/snapshots/2026-07-26.json",
+  "criteria": {
+    "minImpressions": 30,
+    "minGrowthRate": 0.3,
+    "minClicksGrowth": 2
+  },
+  "count": 5,
+  "opportunities": [
+    {
+      "query": "メンズエステランキング大阪キタ",
+      "current": {
+        "clicks": 0,
+        "impressions": 52,
+        "ctr": 0,
+        "position": 7.326923076923077
+      },
+      "previous": null,
+      "impressionsGrowthRate": 1,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 95.2,
+      "type": "area",
+      "area": {
+        "slug": "osakaminami",
+        "label": "大阪",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/osakaminami",
+      "guideRoute": "/guide/area/osakaminami",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 85,
+        "reasons": [
+          "decision:ランキング",
+          "has_area",
+          "area_plus_decision",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "渋谷 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 66,
+        "ctr": 0,
+        "position": 73.28787878787878
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 4,
+        "position": 49
+      },
+      "impressionsGrowthRate": 15.5,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 96.6,
+      "type": "area",
+      "area": {
+        "slug": "shibuya",
+        "label": "渋谷",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shibuya",
+      "guideRoute": "/guide/area/shibuya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "池袋 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 51,
+        "ctr": 0,
+        "position": 65.01960784313725
+      },
+      "previous": null,
+      "impressionsGrowthRate": 1,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 95.1,
+      "type": "area",
+      "area": {
+        "slug": "ikebukuro",
+        "label": "池袋",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/ikebukuro",
+      "guideRoute": "/guide/area/ikebukuro",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": true,
+      "priority": "low"
+    },
+    {
+      "query": "渋谷駅 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 46,
+        "ctr": 0,
+        "position": 68.67391304347827
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 14,
+        "position": 22.142857142857142
+      },
+      "impressionsGrowthRate": 2.286,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 94.6,
+      "type": "area",
+      "area": {
+        "slug": "shibuya",
+        "label": "渋谷",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shibuya",
+      "guideRoute": "/guide/area/shibuya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "福岡メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 32,
+        "ctr": 0,
+        "position": 46.1875
+      },
+      "previous": null,
+      "impressionsGrowthRate": 1,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 93.2,
+      "type": "area",
+      "area": {
+        "slug": "hakata",
+        "label": "博多",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/hakata",
+      "guideRoute": "/guide/area/hakata",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    }
+  ]
+}
