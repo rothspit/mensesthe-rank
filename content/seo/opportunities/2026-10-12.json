@@ -1,0 +1,191 @@
+{
+  "generatedAt": "2026-10-12T08:18:09.981Z",
+  "currentSnapshot": "content/seo/snapshots/2026-10-12.json",
+  "previousSnapshot": "content/seo/snapshots/2026-07-26.json",
+  "criteria": {
+    "minImpressions": 30,
+    "minGrowthRate": 0.3,
+    "minClicksGrowth": 2
+  },
+  "count": 5,
+  "opportunities": [
+    {
+      "query": "渋谷 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 82,
+        "ctr": 0,
+        "position": 67.42682926829268
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 4,
+        "position": 49
+      },
+      "impressionsGrowthRate": 19.5,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 98.2,
+      "type": "area",
+      "area": {
+        "slug": "shibuya",
+        "label": "渋谷",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shibuya",
+      "guideRoute": "/guide/area/shibuya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "池袋 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 53,
+        "ctr": 0,
+        "position": 65.50943396226415
+      },
+      "previous": null,
+      "impressionsGrowthRate": 1,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 95.3,
+      "type": "area",
+      "area": {
+        "slug": "ikebukuro",
+        "label": "池袋",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/ikebukuro",
+      "guideRoute": "/guide/area/ikebukuro",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": true,
+      "priority": "low"
+    },
+    {
+      "query": "渋谷駅 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 50,
+        "ctr": 0,
+        "position": 69.14
+      },
+      "previous": {
+        "clicks": 0,
+        "impressions": 14,
+        "position": 22.142857142857142
+      },
+      "impressionsGrowthRate": 2.571,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 95,
+      "type": "area",
+      "area": {
+        "slug": "shibuya",
+        "label": "渋谷",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shibuya",
+      "guideRoute": "/guide/area/shibuya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "新宿 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 33,
+        "ctr": 0,
+        "position": 69.63636363636364
+      },
+      "previous": null,
+      "impressionsGrowthRate": 1,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 93.3,
+      "type": "area",
+      "area": {
+        "slug": "shinjuku",
+        "label": "新宿",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shinjuku",
+      "guideRoute": "/guide/area/shinjuku",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": true,
+      "priority": "low"
+    },
+    {
+      "query": "東浦和メンズエステ バレンタイン",
+      "current": {
+        "clicks": 0,
+        "impressions": 30,
+        "ctr": 0,
+        "position": 5.5
+      },
+      "previous": null,
+      "impressionsGrowthRate": 1,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 93,
+      "type": "area",
+      "area": {
+        "slug": "urawa",
+        "label": "浦和",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/urawa",
+      "guideRoute": "/guide/area/urawa",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    }
+  ]
+}
