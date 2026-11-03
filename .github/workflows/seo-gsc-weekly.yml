@@ -27,6 +27,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # PR ブランチは毎回 main から作り直されるので、前週までのスナップショットを引き継ぐ
+      - name: Restore previous snapshots
+        run: |
+          if git fetch --depth 1 origin chore/seo-gsc-weekly; then
+            git checkout FETCH_HEAD -- content/seo/snapshots || true
+          fi
+
       - uses: actions/setup-node@v4
         with:
           node-version: '20'

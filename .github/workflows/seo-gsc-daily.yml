@@ -1,0 +1,67 @@
+# 毎日: GSC の日別データを data/gsc-daily ブランチへ置き換えで保存
+#
+# 取得元の API に 16 か月分残るので、ブランチは履歴を持たず毎回 1 コミットで上書きする。
+#
+# Secrets:
+#   GSC_SERVICE_ACCOUNT_JSON
+#   GSC_SITE_URL（例 https://mensesthe-rank.jp/）
+
+name: SEO GSC Daily
+
+on:
+  schedule:
+    - cron: '30 1 * * *' # 毎日 01:30 UTC（10:30 JST）
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Days of date x query / date x page rows'
+        required: false
+        default: '28'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-gsc-daily
+  cancel-in-progress: false
+
+jobs:
+  gsc-daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm install --no-save googleapis
+
+      - name: Fetch GSC daily
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          DAYS: ${{ inputs.days || '28' }}
+        run: |
+          if [ -z "$GSC_SERVICE_ACCOUNT_JSON" ]; then
+            echo "::error::GSC_SERVICE_ACCOUNT_JSON 未設定"
+            exit 1
+          fi
+          export GSC_SITE_URL="${GSC_SITE_URL:-https://mensesthe-rank.jp/}"
+          node scripts/seo/fetch-gsc-daily.js --days "$DAYS" --out "$RUNNER_TEMP/gsc-daily"
+
+      - name: Publish to data/gsc-daily
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          cd "$RUNNER_TEMP/gsc-daily"
+          git init -q -b data/gsc-daily
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "GSC daily $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:refs/heads/data/gsc-daily

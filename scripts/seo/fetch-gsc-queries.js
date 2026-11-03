@@ -52,7 +52,7 @@ async function main() {
   } else if (args.api) {
     const endDate = daysAgo(3); // GSC は数日遅延
     const startDate = daysAgo(3 + args.days);
-    rows = await fetchGscSearchAnalytics({ startDate, endDate, rowLimit: 2500 });
+    rows = await fetchGscSearchAnalytics({ startDate, endDate, rowLimit: 25000 });
     meta = { source: 'api', kind: 'query', startDate, endDate, days: args.days };
   } else {
     console.error(`使い方:
