@@ -1,0 +1,81 @@
+{
+  "generatedAt": "2026-11-09T08:51:54.187Z",
+  "currentSnapshot": "content/seo/snapshots/2026-11-09.json",
+  "previousSnapshot": "content/seo/snapshots/2026-11-02.json",
+  "criteria": {
+    "minImpressions": 30,
+    "minGrowthRate": 0.3,
+    "minClicksGrowth": 2
+  },
+  "count": 2,
+  "opportunities": [
+    {
+      "query": "渋谷 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 72,
+        "ctr": 0,
+        "position": 72.63888888888889
+      },
+      "previous": null,
+      "impressionsGrowthRate": 1,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 97.2,
+      "type": "area",
+      "area": {
+        "slug": "shibuya",
+        "label": "渋谷",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shibuya",
+      "guideRoute": "/guide/area/shibuya",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": false,
+      "priority": "high"
+    },
+    {
+      "query": "新宿 メンズエステ",
+      "current": {
+        "clicks": 0,
+        "impressions": 64,
+        "ctr": 0,
+        "position": 58.59375
+      },
+      "previous": null,
+      "impressionsGrowthRate": 1,
+      "clicksDelta": 0,
+      "positionOpportunity": false,
+      "rising": true,
+      "score": 96.4,
+      "type": "area",
+      "area": {
+        "slug": "shinjuku",
+        "label": "新宿",
+        "hasPublishedGuide": true
+      },
+      "suggestedRoute": "/areas/shinjuku",
+      "guideRoute": "/guide/area/shinjuku",
+      "action": "enrich_existing",
+      "intent": {
+        "isInquiryIntent": true,
+        "score": 45,
+        "reasons": [
+          "has_area",
+          "area_mens_esthe"
+        ]
+      },
+      "alreadyCovered": true,
+      "priority": "low"
+    }
+  ]
+}
