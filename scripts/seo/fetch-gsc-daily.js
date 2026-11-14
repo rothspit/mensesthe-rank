@@ -79,6 +79,26 @@ async function queryAll(client, { startDate, endDate, dimensions, maxRows }) {
   return { rows, metadata };
 }
 
+/**
+ * 期間まとめて取ると上限行数でクリックの少ない行（直近の日に多い）が切れるので、1日ずつ取る
+ */
+async function queryPerDay(client, { startDate, endDate, dimensions, maxRows }) {
+  const rows = [];
+  let metadata = null;
+  for (let day = startDate; day <= endDate; day = nextDay(day)) {
+    const result = await queryAll(client, { startDate: day, endDate: day, dimensions, maxRows });
+    if (!metadata?.firstIncompleteDate && result.metadata?.firstIncompleteDate) metadata = result.metadata;
+    rows.push(...result.rows);
+  }
+  return { rows, metadata };
+}
+
+function nextDay(day) {
+  const d = new Date(`${day}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + 1);
+  return isoDate(d);
+}
+
 async function main() {
   const args = parseArgs(process.argv);
   const client = await createClient();
@@ -88,17 +108,19 @@ async function main() {
 
   const jobs = [
     { file: 'totals.json', dimensions: ['date'], startDate: daysAgo(args.totalDays) },
-    { file: 'queries.json', dimensions: ['date', 'query'], startDate: daysAgo(args.days) },
-    { file: 'pages.json', dimensions: ['date', 'page'], startDate: daysAgo(args.days) },
+    { file: 'queries.json', dimensions: ['date', 'query'], startDate: daysAgo(args.days), perDay: true },
+    { file: 'pages.json', dimensions: ['date', 'page'], startDate: daysAgo(args.days), perDay: true },
   ];
 
   for (const job of jobs) {
-    const { rows, metadata } = await queryAll(client, {
-      startDate: job.startDate,
-      endDate,
-      dimensions: job.dimensions,
-      maxRows: args.maxRows,
-    });
+    const { rows, metadata } = job.perDay
+      ? await queryPerDay(client, { ...job, endDate, maxRows: args.maxRows })
+      : await queryAll(client, {
+        startDate: job.startDate,
+        endDate,
+        dimensions: job.dimensions,
+        maxRows: args.maxRows,
+      });
     const payload = {
       fetchedAt: new Date().toISOString(),
       siteUrl: SITE_URL,
