@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-11-23T09:59:20.056Z",
+  "currentSnapshot": "content/seo/snapshots/2026-11-23.json",
+  "previousSnapshot": "content/seo/snapshots/2026-11-16.json",
+  "criteria": {
+    "minImpressions": 30,
+    "minGrowthRate": 0.3,
+    "minClicksGrowth": 2
+  },
+  "count": 0,
+  "opportunities": []
+}
